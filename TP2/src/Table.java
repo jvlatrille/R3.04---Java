@@ -1,4 +1,4 @@
-public class Table {
+﻿public class Table {
     private String _numeroTable;
     private Client _monClient;
 
