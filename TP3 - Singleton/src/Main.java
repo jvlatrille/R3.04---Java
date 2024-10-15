@@ -1,15 +1,19 @@
 public class Main {
     public static void main(String[] args) {
+        // a)
         SingletonChefCuisinier leCuisinier;
         SingletonChefCuisinier leChef;
 
+        // b)
         leCuisinier = SingletonChefCuisinier.getInstance();
+
+        // c)
+        leCuisinier.setNom("Navarro");
+
+        // d)
         leChef = SingletonChefCuisinier.getInstance();
 
-        leCuisinier.setNom("Navarro");
-        leCuisinier.setPrenom("Prilippe");
-
+        // e)
         System.out.println("Nom: " + leChef.getNom());
-        System.out.println("Prenom: " + leChef.getPrenom());
     }
 }
