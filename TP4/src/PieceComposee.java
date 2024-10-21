@@ -32,7 +32,6 @@ public class PieceComposee extends PieceComposante {
     }
 
     public boolean ajouterPiece(PieceComposante piece) {
-
         return listePiece.add(piece);
     }
 
