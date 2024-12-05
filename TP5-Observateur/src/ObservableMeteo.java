@@ -1,15 +1,16 @@
-import java.util.ArrayList;
-
-public class ObservableMeteo extends Observable {
+// Classe concrète : ObservableMeteo
+class ObservableMeteo extends Observable {
     private String libelle;
     private String dateHeure;
     private double temperature;
     private double pression;
 
+    // Constructeur
     public ObservableMeteo(String libelle) {
         this.libelle = libelle;
     }
 
+    // Mettre à jour les valeurs observées
     public void setDateHeureTemperaturePression(String dateHeure, double temperature, double pression) {
         this.dateHeure = dateHeure;
         this.temperature = temperature;
@@ -17,6 +18,7 @@ public class ObservableMeteo extends Observable {
         notifierObservateurs();
     }
 
+    // Getters
     public String getDateHeure() {
         return dateHeure;
     }

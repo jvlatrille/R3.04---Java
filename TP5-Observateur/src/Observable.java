@@ -1,23 +1,24 @@
 import java.util.ArrayList;
+import java.util.List;
 
-public abstract class Observable {
-    protected ArrayList<Observateur> mesObservateurs = new ArrayList<>();
+// Classe abstraite : Observable
+abstract class Observable {
+    protected List<Observateur> observateurs = new ArrayList<>();
 
-    public boolean ajouterObservateur(Observateur obs) {
-        return mesObservateurs.add(obs);
+    // Ajouter un observateur
+    public void ajouterObservateur(Observateur observateur) {
+        observateurs.add(observateur);
     }
 
-    public boolean supprimerObservateur(Observateur obs) {
-        return mesObservateurs.remove(obs);
+    // Supprimer un observateur
+    public void supprimerObservateur(Observateur observateur) {
+        observateurs.remove(observateur);
     }
 
-    public boolean existeObservateur(Observateur obs) {
-        return mesObservateurs.contains(obs);
-    }
-
+    // Notifier tous les observateurs
     protected void notifierObservateurs() {
-        for (Observateur obs : mesObservateurs) {
-            obs.reagir();
+        for (Observateur observateur : observateurs) {
+            observateur.reagir();
         }
     }
 }
