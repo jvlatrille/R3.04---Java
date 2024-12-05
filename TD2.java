@@ -19,7 +19,7 @@ public boolean ajouterIngredient(Ingredient ingredient) {
     boolean ajouter;
     if (ajouter = !existeIngredient(ingredient)))
         _mesIngredient.add(ingredient);
-    return ajouter;
+    return ajouter; 
 }
 
 public boolean retirerIngredient(Ingredient ingredient) {

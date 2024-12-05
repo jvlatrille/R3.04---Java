@@ -12,6 +12,7 @@ public class SingletonChefCuisinier {
 
     private String nom;
     private String prenom;
+    private String nationalite;
 
     public void setNom(String n) {
         nom = n;
@@ -27,5 +28,13 @@ public class SingletonChefCuisinier {
 
     public String getPrenom() {
         return prenom;
+    }
+
+    public void setNationalite(String n) {
+        nationalite = n;
+    }
+
+    public String getNationalite() {
+        return nationalite;
     }
 }

@@ -10,10 +10,12 @@ public class Main {
         // c)
         leCuisinier.setNom("Navarro");
 
+        leCuisinier.setNationalite("Espagnol");
+
         // d)
         leChef = SingletonChefCuisinier.getInstance();
 
         // e)
-        System.out.println("Nom: " + leChef.getNom());
+        System.out.println("Nom: " + leChef.getNationalite());
     }
 }
