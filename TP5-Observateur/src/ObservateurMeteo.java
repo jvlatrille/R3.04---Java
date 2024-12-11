@@ -1,6 +1,6 @@
 // Classe concrète : ObservateurMeteo
 class ObservateurMeteo extends Observateur {
-    private String libelle;
+    private final String libelle;
     private String dateHeureLocale;
     private double temperatureLocale;
     private double pressionLocale;
@@ -12,8 +12,7 @@ class ObservateurMeteo extends Observateur {
 
     @Override
     public void reagir() {
-        if (observable instanceof ObservableMeteo) {
-            ObservableMeteo meteo = (ObservableMeteo) observable;
+        if (observable instanceof ObservableMeteo meteo) {
             this.dateHeureLocale = meteo.getDateHeure();
             this.temperatureLocale = meteo.getTemperature();
             this.pressionLocale = meteo.getPression();

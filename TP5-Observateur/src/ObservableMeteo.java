@@ -1,6 +1,6 @@
 // Classe concrète : ObservableMeteo
 class ObservableMeteo extends Observable {
-    private String libelle;
+    private final String libelle;
     private String dateHeure;
     private double temperature;
     private double pression;
